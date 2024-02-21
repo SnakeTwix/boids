@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: hsl(0, 0%, 10%);
+}
+
+/* In case the boids are out of view to not diplay any scrollbars */
+body {
+    overflow: hidden;
+}
+
+.boid {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid white;
+
+    position: absolute;
+}
