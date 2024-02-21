@@ -11,6 +11,15 @@ html {
 /* In case the boids are out of view to not diplay any scrollbars */
 body {
     overflow: hidden;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input {
+    background-color: hsl(0, 0%, 30%)
 }
 
 .boid {
@@ -21,4 +30,84 @@ body {
     border-left: 20px solid white;
 
     position: absolute;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+
+    margin: 0.5rem;
+}
+
+.box {
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.gear-svg {
+    display: block;
+    height: 3em;
+    width: 3em;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(319deg) brightness(113%) contrast(100%);
+}
+
+.settings {
+    cursor: pointer;
+    position: absolute;
+
+    width: min-content;
+    height: min-content;
+
+    transition-property: background-color;
+    transition-duration: 0.25s;
+}
+
+.settings:hover {
+    background-color: hsl(0, 0%, 30%);
+}
+
+.hidden {
+    opacity: 0%;
+    pointer-events: none;
+}
+
+.settings-menu {
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    position: absolute;
+    width: 25em;
+    height: 40em;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.slider-text {
+    color: white;
+    font-size: 2em;
+
+    text-align: center;
+}
+
+.slider {
+    margin-top: 1em;
+    width: 20em;
+    height: 1em;
+    background-color: hsl(0, 0%, 30%);
+    position: relative;
+    border-radius: 50em;
+}
+
+.slider-ball {
+    position: absolute;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    top: -0.5em;
+
+    cursor: pointer;
 }
