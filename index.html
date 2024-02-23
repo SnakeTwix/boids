@@ -15,10 +15,20 @@
     <div class="wrapper">
         <div id="settings-btn" class="box settings"><img src="options.svg" class="gear-svg"></div>
         <div id="settings-menu" class="box settings-menu hidden">
-            <div class="slider-wrapper">
-                <p class="slider-text">Boid Count</p>
+            <div class="option slider-wrapper">
+                <p class="option-text">Boid Count</p>
                 <div class="slider">
                     <div data-prop="boid-count" class="slider-ball"></div>
+                </div>
+            </div>
+            <div class="option">
+                <p class="option-text">Render Mode</p>
+                <div class="toggle-wrapper">
+                    <input data-prop="render-mode" id="render-mode-checkbox" type="checkbox" hidden>
+                    <span class="option-detail">Position</span>
+                    <label class="toggle" for="render-mode-checkbox"></label>
+                    <span class="option-detail">Canvas</span>
+                    
                 </div>
             </div>
         </div>
